@@ -59,7 +59,7 @@ with open(args.file, mode="r", encoding=args.encoding) as src:
                 ii = int(iimatch.group())
             rline = re.sub(
                r'(\d{2}):(\d{2}):(\d{2}),(\d{3})', replace_time, line)
-            if ii in args.debug_frames or []:
+            if ii in (args.debug_frames or []):
                 print(rline)
                 pass
             dest.write(rline)
